@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import sys
+if __name__ == "__main__":
 
+    from sys import argv
 
-def infinite_add():
-    sum = 0
-    for i in range(1, len(sys.argv)):
-        sum += int(sys.argv[i])
-    print("{}".format(sum))
-if __name__ == '__main__':
-    infinite_add()
+    add = 0
+
+    if len(argv) > 1:
+        for i in range(1, len(argv)):
+            add += int(argv[i])
+    print("{:d}".format(add))
