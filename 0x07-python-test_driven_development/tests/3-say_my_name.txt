@@ -1,0 +1,59 @@
+The module `3-say_my_name`
+==========================
+
+The function `say_my_name`
+--------------------------
+This function prints `My name is <first name <last name>`.
+The first and last name are the argument supplied to the
+function, which are mandatory to be a string type.
+
+To use this function, you need to first import it:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+After importing, you can go ahead to use the function by supplying your
+arguments.
+
+Below are the few cases on how to use the function:
+
+	Case 1: Both arguments are strings
+	------------------------------------
+	>>> say_my_name("            Temitope       ", "Olowosuyi")
+	My name is Temitope Olowosuyi
+
+	Case 2: Last name not supplied
+	------------------------------
+	>>> say_my_name("John")
+	My name is John 
+
+	Case 3: First name not supplied
+	-------------------------------
+	>>> say_my_name("", "Olowosuyi")
+	My name is  Olowosuyi
+
+	Case 4: First name or Last name is an int
+	-----------------------------
+	>>> say_my_name(98, "Olowosuyi")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("Tee", 63)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	Case 5: Both arguments with wrong type
+	--------------------------------------
+	>>> say_my_name((98), ['Olowosuyi'])
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	Case 6: Both arguments are none type
+	--------------------------------------
+	>>> say_my_name(None, None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	Case 7: Last argument is None
+	--------------------------------------
+	>>> say_my_name("Tope", None)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
